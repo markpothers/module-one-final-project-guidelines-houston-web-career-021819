@@ -1,4 +1,4 @@
-class Deals < ActiveRecord::Migration[5.0]
+class CreateDeals < ActiveRecord::Migration[5.0]
   def change
     create_table :deals do | table |
       table.integer :product_id

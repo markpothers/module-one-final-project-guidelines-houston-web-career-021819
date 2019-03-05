@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190305171217) do
+ActiveRecord::Schema.define(version: 20190305210318) do
 
   create_table "cities", force: :cascade do |t|
     t.text "name"
+    t.text "ref"
   end
 
   create_table "deals", force: :cascade do |t|
@@ -30,6 +31,7 @@ ActiveRecord::Schema.define(version: 20190305171217) do
     t.text    "name"
     t.text    "address"
     t.integer "city_id"
+    t.integer "phone"
   end
 
   create_table "products", force: :cascade do |t|
