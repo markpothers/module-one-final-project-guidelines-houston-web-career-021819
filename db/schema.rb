@@ -17,8 +17,10 @@ ActiveRecord::Schema.define(version: 20190306010733) do
   end
 
   create_table "deals", force: :cascade do |t|
-    t.integer "product_id"
+    t.integer "service_id"
     t.integer "city_id"
+    t.text    "name"
+    t.text    "description"
     t.integer "merchant_id"
     t.integer "list_price"
     t.integer "deal_price"
@@ -29,13 +31,10 @@ ActiveRecord::Schema.define(version: 20190306010733) do
 
   create_table "merchants", force: :cascade do |t|
     t.text    "name"
-    t.text    "address"
     t.integer "phone"
   end
 
-  create_table "products", force: :cascade do |t|
-    t.text "name"
-    t.text "description"
+  create_table "services", force: :cascade do |t|
     t.text "service"
   end
 

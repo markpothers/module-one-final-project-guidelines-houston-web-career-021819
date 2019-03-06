@@ -15,15 +15,12 @@ class CommandLineInterface
 
   def choose_service
     puts "We can help you find a number of different types of services for your car.  Please choose from the following list."
-      services = Product.all.map do |product|
-          product.service
-      end
-      unique_services = services.uniq
-      unique_services.each_with_index do |service, index|
-      puts "#{index + 1}. #{service}."
+    Service.all.each do |service|
+      puts "#{service.id}. #{service.service}"
     end
     gets.chomp
   end
+
 
 
 

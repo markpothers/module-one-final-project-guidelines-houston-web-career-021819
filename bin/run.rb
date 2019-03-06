@@ -5320,7 +5320,7 @@ end
 
    deals.each do |city|
         city[1][:"deals"].each do |indiv|
-            Product.find_or_create_by(name: indiv[:"deal"][:"short_title"], description: indiv[:"deal"][:"description"], service: indiv[:"deal"][:"provider_slug"])
+            Service.find_or_create_by(service: indiv[:"deal"][:"provider_slug"])
         end
     end
 
@@ -5332,7 +5332,7 @@ end
 
    deals.each do |city|
       city[1][:"deals"].each do |indiv|
-         Deal.find_or_create_by(list_price: indiv[:"deal"][:"value"], deal_price: indiv[:"deal"][:"price"], discount: indiv[:"deal"][:"discount_percentage"]*100, url: indiv[:"deal"][:"url"], address: "#{indiv[:"deal"][:"merchant"][:"address"]}, #{indiv[:"deal"][:"merchant"][:"locality"]}, #{indiv[:"deal"][:"merchant"][:"region"]}, #{indiv[:"deal"][:"merchant"][:"postal_code"]}",city_id: City.find_by(name: city[0].to_s).id, product_id: Product.find_by(description: indiv[:"deal"][:"description"]).id, merchant_id: Merchant.find_by(name: indiv[:"deal"][:"merchant"][:"name"]).id)
+         Deal.find_or_create_by(list_price: indiv[:"deal"][:"value"], deal_price: indiv[:"deal"][:"price"], discount: indiv[:"deal"][:"discount_percentage"]*100, url: indiv[:"deal"][:"url"], address: "#{indiv[:"deal"][:"merchant"][:"address"]}, #{indiv[:"deal"][:"merchant"][:"locality"]}, #{indiv[:"deal"][:"merchant"][:"region"]}, #{indiv[:"deal"][:"merchant"][:"postal_code"]}",city_id: City.find_by(name: city[0].to_s).id, service_id: Service.find_by(service: indiv[:"deal"][:"provider_slug"]).id, merchant_id: Merchant.find_by(name: indiv[:"deal"][:"merchant"][:"name"]).id, name: indiv[:"deal"][:"short_title"], description: indiv[:"deal"][:"description"])
       end
   end
 
