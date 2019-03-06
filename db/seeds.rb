@@ -5,7 +5,7 @@ require_relative '../config/environment'
 null = "null"
 
 deals = {
-    "Houston": {
+    "houston": {
       "query": {
           "total": 28,
           "page": 1,
@@ -744,7 +744,7 @@ deals = {
    
 
 
-    "San Antonio": {
+    "san_antonio": {
       "query": {
           "total": 9,
           "page": 1,
