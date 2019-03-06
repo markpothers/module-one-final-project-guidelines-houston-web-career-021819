@@ -5,7 +5,7 @@ require_relative '../config/environment'
 null = "null"
 
 deals = {
-    "houston": {
+    "Houston": {
       "query": {
           "total": 28,
           "page": 1,
@@ -744,7 +744,7 @@ deals = {
    
 
 
-    "san_antonio": {
+    "San Antonio": {
       "query": {
           "total": 9,
           "page": 1,
@@ -897,7 +897,7 @@ deals = {
                   "updated_at": "2019-03-02T09:05:30Z",
                   "merchant": {
                       "id": 339578,
-                      "name": "Car Care Deals",
+                      "name": "Suncontrol",
                       "address": "3400 Nacogdoches Road",
                       "locality": "San Antonio",
                       "region": "TX",
@@ -932,7 +932,7 @@ deals = {
                   "updated_at": "2018-11-19T08:53:48Z",
                   "merchant": {
                       "id": 295968,
-                      "name": "Patriot Car Wash",
+                      "name": "Discount Car Care",
                       "address": "115 Long Street",
                       "locality": "San Marcos",
                       "region": "TX",
@@ -968,7 +968,7 @@ deals = {
                   "updated_at": "2019-01-12T11:10:48Z",
                   "merchant": {
                       "id": 276238,
-                      "name": "Ken's Tire and Auto",
+                      "name": "Midas",
                       "address": "8415 McCullough Avenue",
                       "locality": "San Antonio",
                       "region": "TX",
@@ -1003,7 +1003,7 @@ deals = {
                   "updated_at": "2019-01-12T11:10:48Z",
                   "merchant": {
                       "id": 308451,
-                      "name": "Primetime PDR",
+                      "name": "Precision Tune Auto Care",
                       "address": "7515 Grissom Road",
                       "locality": "San Antonio",
                       "region": "TX",
@@ -1038,7 +1038,7 @@ deals = {
                   "updated_at": "2019-01-12T11:10:48Z",
                   "merchant": {
                       "id": 313077,
-                      "name": "Collision Inn & Fleet Service",
+                      "name": "2 Quick Automotive FM 1960",
                       "address": "3400 Nacogdoches Road",
                       "locality": "San Antonio",
                       "region": "TX",
@@ -1135,7 +1135,7 @@ deals = {
                   "updated_at": "2019-01-12T09:11:00Z",
                   "merchant": {
                       "id": 316277,
-                      "name": "AAG Auto Repair",
+                      "name": "Midas",
                       "address": "3349 183rd Street",
                       "locality": "Homewood",
                       "region": "IL",
@@ -1171,7 +1171,7 @@ deals = {
                   "updated_at": "2019-01-12T09:10:58Z",
                   "merchant": {
                       "id": 315911,
-                      "name": "My Tech Auto Services & Detailing",
+                      "name": "Suncontrol",
                       "address": "10148 Clow Creek Road",
                       "locality": "Plainfield",
                       "region": "IL",
@@ -1207,7 +1207,7 @@ deals = {
                   "updated_at": "2019-02-02T08:47:14Z",
                   "merchant": {
                       "id": 227097,
-                      "name": "So Kleen Auto Detailing",
+                      "name": "Discount Car Care",
                       "address": "10049 South Mandel Street",
                       "locality": "Plainfield",
                       "region": "IL",
@@ -1243,7 +1243,7 @@ deals = {
                   "updated_at": "2019-02-16T08:51:19Z",
                   "merchant": {
                       "id": 202158,
-                      "name": "Farnsworth Auto Plus and Tire",
+                      "name": "Ultimate Protection and Sound",
                       "address": "1175 North Farnsworth Avenue",
                       "locality": "Aurora",
                       "region": "IL",
@@ -1279,7 +1279,7 @@ deals = {
                   "updated_at": "2018-11-19T09:11:50Z",
                   "merchant": {
                       "id": 166390,
-                      "name": "Arlington Car Wash & Detail",
+                      "name": "E-Klan Kar Kare",
                       "address": "2100 South Arlington Heights Road",
                       "locality": "Arlington Heights",
                       "region": "IL",
@@ -1315,7 +1315,7 @@ deals = {
                   "updated_at": "2019-01-31T08:47:29Z",
                   "merchant": {
                       "id": 166390,
-                      "name": "Arlington Car Wash & Detail",
+                      "name": "Precision Tune Auto Care",
                       "address": "2100 South Arlington Heights Road",
                       "locality": "Arlington Heights",
                       "region": "IL",
@@ -1351,7 +1351,7 @@ deals = {
                   "updated_at": "2018-05-08T11:04:12Z",
                   "merchant": {
                       "id": 230595,
-                      "name": "We Wash Express",
+                      "name": "Kwik Kar at Champions",
                       "address": "5600 New Wilke Road",
                       "locality": "Rolling Meadows",
                       "region": "IL",
@@ -1387,7 +1387,7 @@ deals = {
                   "updated_at": "2018-12-04T08:44:24Z",
                   "merchant": {
                       "id": 277486,
-                      "name": "Lake Car Wash",
+                      "name": "Practical Auto Care",
                       "address": "1970 1st Street",
                       "locality": "Highland Park",
                       "region": "IL",
@@ -1639,7 +1639,7 @@ deals = {
                   "updated_at": "2018-04-15T11:28:03Z",
                   "merchant": {
                       "id": 166390,
-                      "name": "Arlington Car Wash & Detail",
+                      "name": "Platinum Auto Spa",
                       "address": "2100 South Arlington Heights Road",
                       "locality": "Arlington Heights",
                       "region": "IL",
@@ -1711,7 +1711,7 @@ deals = {
                   "updated_at": "2019-01-17T08:45:19Z",
                   "merchant": {
                       "id": 307069,
-                      "name": "Detail Kings",
+                      "name": "Erik's Automotive",
                       "address": "2001 Butterfield Road",
                       "locality": "Downers Grove",
                       "region": "IL",
@@ -1781,7 +1781,7 @@ deals = {
                   "updated_at": "2018-11-19T09:11:50Z",
                   "merchant": {
                       "id": 273220,
-                      "name": "Naper Car Wash",
+                      "name": "Buddy Bear Car Wash",
                       "address": "1090 East 75th Street",
                       "locality": "Naperville",
                       "region": "IL",
@@ -1817,7 +1817,7 @@ deals = {
                   "updated_at": "2018-11-19T09:11:51Z",
                   "merchant": {
                       "id": 250118,
-                      "name": "Weber Wash",
+                      "name": "Buddy Bear Car Wash",
                       "address": "1255 Normantown Road",
                       "locality": "Romeoville",
                       "region": "IL",
@@ -1878,7 +1878,7 @@ deals = {
                   "updated_at": "2019-01-12T08:50:31Z",
                   "merchant": {
                       "id": 242638,
-                      "name": "Wash Me Fast Car Wash",
+                      "name": "Buddy Bear Car Wash",
                       "address": "2149 Cobb Parkway Northwest",
                       "locality": "Kennesaw",
                       "region": "GA",
@@ -1914,7 +1914,7 @@ deals = {
                   "updated_at": "2019-02-08T08:32:07Z",
                   "merchant": {
                       "id": 329927,
-                      "name": "Auto 285",
+                      "name": "Kwik Kar at Champions",
                       "address": "4529 Glenwood Road",
                       "locality": "Decatur",
                       "region": "GA",
@@ -1950,7 +1950,7 @@ deals = {
                   "updated_at": "2019-01-12T08:50:32Z",
                   "merchant": {
                       "id": 316966,
-                      "name": "ALM Kia South",
+                      "name": "Kwik Kar at Champions",
                       "address": "4310 Jonesboro Road",
                       "locality": "Union City",
                       "region": "GA",
@@ -1986,7 +1986,7 @@ deals = {
                   "updated_at": "2019-01-26T08:30:31Z",
                   "merchant": {
                       "id": 323768,
-                      "name": "Atlanta Autohaus",
+                      "name": "Practical Auto Care",
                       "address": "4310 Lawrenceville Highway",
                       "locality": "Lilburn",
                       "region": "GA",
@@ -2021,7 +2021,7 @@ deals = {
                   "updated_at": "2019-02-15T08:34:01Z",
                   "merchant": {
                       "id": 332222,
-                      "name": "Wg Cleaning Services",
+                      "name": "We Wash Express",
                       "address": "1585 Roswell Road",
                       "locality": "Marietta",
                       "region": "GA",
@@ -2057,7 +2057,7 @@ deals = {
                   "updated_at": "2019-01-12T08:50:31Z",
                   "merchant": {
                       "id": 308655,
-                      "name": "519 Customz",
+                      "name": "We Wash Express",
                       "address": "5950 Covington Highway",
                       "locality": "Decatur",
                       "region": "GA",
@@ -2127,7 +2127,7 @@ deals = {
                   "updated_at": "2019-01-12T08:50:32Z",
                   "merchant": {
                       "id": 313572,
-                      "name": "Luminex Lighting",
+                      "name": "Ultimate Protection and Sound",
                       "address": "1823 Mountain Industrial Boulevard",
                       "locality": "Tucker",
                       "region": "GA",
@@ -2162,7 +2162,7 @@ deals = {
                   "updated_at": "2019-01-12T08:50:30Z",
                   "merchant": {
                       "id": 295943,
-                      "name": "The Driveway Detail",
+                      "name": "Suncontrol",
                       "address": "Atlantic Station",
                       "locality": "Atlanta",
                       "region": "GA",
@@ -2232,7 +2232,7 @@ deals = {
                   "updated_at": "2019-01-25T08:29:56Z",
                   "merchant": {
                       "id": 301781,
-                      "name": "Graystone Automotive",
+                      "name": "Midas",
                       "address": "4796 Stone Mountain Highway",
                       "locality": "Lilburn",
                       "region": "GA",
@@ -2268,7 +2268,7 @@ deals = {
                   "updated_at": "2019-01-12T08:50:31Z",
                   "merchant": {
                       "id": 244792,
-                      "name": "Creative Cut Designs",
+                      "name": "Discount Car Care",
                       "address": "102 North 85th Parkway",
                       "locality": "Fayetteville",
                       "region": "GA",
@@ -2304,7 +2304,7 @@ deals = {
                   "updated_at": "2019-02-26T08:29:15Z",
                   "merchant": {
                       "id": 336990,
-                      "name": "Fadeaway Detailing",
+                      "name": "We Wash Express",
                       "address": "5055 Old Ellis Point",
                       "locality": "Roswell",
                       "region": "GA",
@@ -2365,7 +2365,7 @@ deals = {
                   "updated_at": "2019-01-26T09:47:28Z",
                   "merchant": {
                       "id": 323870,
-                      "name": "Studio City Auto Repair and Smog\n",
+                      "name": "E-Klan Kar Kare",
                       "address": "11467 Ventura Boulevard",
                       "locality": "Los Angeles",
                       "region": "CA",
@@ -2474,7 +2474,7 @@ deals = {
                   "updated_at": "2019-01-12T09:56:59Z",
                   "merchant": {
                       "id": 308545,
-                      "name": "Coast 2 Coast Collision Center",
+                      "name": "Valvoline Instant Oil Change",
                       "address": "825 North Central Avenue",
                       "locality": "Upland",
                       "region": "CA",
@@ -2510,7 +2510,7 @@ deals = {
                   "updated_at": "2019-02-03T09:42:31Z",
                   "merchant": {
                       "id": 325865,
-                      "name": "Al & Ed's Autosound",
+                      "name": "AZ Stereo",
                       "address": "2557 Lincoln Blvd.",
                       "locality": "Marina Del Rey",
                       "region": "CA",
@@ -2546,7 +2546,7 @@ deals = {
                   "updated_at": "2019-01-13T09:56:13Z",
                   "merchant": {
                       "id": 44328,
-                      "name": "Mike's Tint Shop",
+                      "name": "Suncontrol",
                       "address": "1725 W Katella Ave",
                       "locality": "Orange",
                       "region": "CA",
@@ -2583,7 +2583,7 @@ deals = {
                   "updated_at": "2019-01-12T09:57:01Z",
                   "merchant": {
                       "id": 78785,
-                      "name": "Sunland Tire",
+                      "name": "NTB Big O Tires",
                       "address": "2019 Bonita Avenue",
                       "locality": "La Verne",
                       "region": "CA",
@@ -2620,7 +2620,7 @@ deals = {
                   "updated_at": "2019-01-12T10:14:23Z",
                   "merchant": {
                       "id": 315726,
-                      "name": "Town Center Auto Spa",
+                      "name": "Buddy Bear Car Wash",
                       "address": "26575 McBean Parkway",
                       "locality": "Santa Clarita",
                       "region": "CA",
@@ -2656,7 +2656,7 @@ deals = {
                   "updated_at": "2019-02-19T09:50:15Z",
                   "merchant": {
                       "id": 335071,
-                      "name": "Tint To Win",
+                      "name": "Precision Tune Auto Care",
                       "address": "12007 Vose st",
                       "locality": "North Hollywood",
                       "region": "CA",
@@ -2692,7 +2692,7 @@ deals = {
                   "updated_at": "2019-01-12T10:14:12Z",
                   "merchant": {
                       "id": 317976,
-                      "name": "Valvoline Instant Oil Change",
+                      "name": "Midas",
                       "address": "17175 #B Colima Road",
                       "locality": "Hacienda Heights",
                       "region": "CA",
@@ -2728,7 +2728,7 @@ deals = {
                   "updated_at": "2019-01-12T10:14:21Z",
                   "merchant": {
                       "id": 223426,
-                      "name": "Showroom Auto Detail",
+                      "name": "Platinum Auto Spa",
                       "address": "1200 East Colorado Boulevard",
                       "locality": "Pasadena",
                       "region": "CA",
@@ -2763,7 +2763,7 @@ deals = {
                   "updated_at": "2019-02-15T10:04:56Z",
                   "merchant": {
                       "id": 77948,
-                      "name": "Empire Motorsports",
+                      "name": "Valvoline Instant Oil Change",
                       "address": "1305 South Glendale Avenue",
                       "locality": "Glendale",
                       "region": "CA",
@@ -2800,7 +2800,7 @@ deals = {
                   "updated_at": "2019-01-12T10:14:26Z",
                   "merchant": {
                       "id": 289684,
-                      "name": "Big Tires",
+                      "name": "Suncontrol",
                       "address": "21932 South Avalon Boulevard",
                       "locality": "Carson",
                       "region": "CA",
@@ -2836,7 +2836,7 @@ deals = {
                   "updated_at": "2019-01-12T10:14:22Z",
                   "merchant": {
                       "id": 299791,
-                      "name": "Stevenson Ranch Hand Wash",
+                      "name": "We Wash Express",
                       "address": "24830 Pico Canyon Road",
                       "locality": "Stevenson Ranch",
                       "region": "CA",
@@ -2872,7 +2872,7 @@ deals = {
                   "updated_at": "2018-08-11T12:46:22Z",
                   "merchant": {
                       "id": 263836,
-                      "name": "Onyx inc.",
+                      "name": "Kwik Kar at Champions",
                       "address": "144 East Tamarack Avenue",
                       "locality": "Inglewood",
                       "region": "CA",
@@ -2943,7 +2943,7 @@ deals = {
                   "updated_at": "2019-01-12T10:14:22Z",
                   "merchant": {
                       "id": 298555,
-                      "name": "California Detail Shop",
+                      "name": "Erik's Automotive",
                       "address": "453 West Colorado Street",
                       "locality": "Glendale",
                       "region": "CA",
@@ -2979,7 +2979,7 @@ deals = {
                   "updated_at": "2019-01-12T10:14:23Z",
                   "merchant": {
                       "id": 299791,
-                      "name": "Stevenson Ranch Hand Wash",
+                      "name": "Erik's Automotive",
                       "address": "24830 Pico Canyon Road",
                       "locality": "Stevenson Ranch",
                       "region": "CA",
@@ -3217,7 +3217,7 @@ deals = {
                   "updated_at": "2019-02-20T10:11:29Z",
                   "merchant": {
                       "id": 278494,
-                      "name": "First Street Car Wash and Quick Lube Center",
+                      "name": "AM Lube and Auto Care",
                       "address": "300 West 1st Street",
                       "locality": "Mount Vernon",
                       "region": "NY",
@@ -3361,7 +3361,7 @@ deals = {
                   "updated_at": "2019-01-12T10:12:42Z",
                   "merchant": {
                       "id": 306886,
-                      "name": "Generation Kia",
+                      "name": "AM Lube and Auto Care",
                       "address": "4825 Sunrise Highway",
                       "locality": "Bohemia",
                       "region": "NY",
@@ -3397,7 +3397,7 @@ deals = {
                   "updated_at": "2019-01-12T10:36:10Z",
                   "merchant": {
                       "id": 313757,
-                      "name": "Pro Sound",
+                      "name": "Suncontrol",
                       "address": "8 Darcy Street",
                       "locality": "Newark",
                       "region": "NJ",
@@ -3614,7 +3614,7 @@ deals = {
                   "updated_at": "2019-01-20T10:40:54Z",
                   "merchant": {
                       "id": 320295,
-                      "name": "Eastchester Service Station",
+                      "name": "E-Klan Kar Kare",
                       "address": "407 White Plains Road",
                       "locality": "Eastchester",
                       "region": "NY",
@@ -3855,7 +3855,7 @@ deals = {
                   "updated_at": "2018-11-28T10:40:04Z",
                   "merchant": {
                       "id": 302882,
-                      "name": "K3 Graphic Design ",
+                      "name": "AZ Stereo",
                       "address": "12275 Nebel Street",
                       "locality": "North Bethesda",
                       "region": "MD",
@@ -3890,7 +3890,7 @@ deals = {
                   "updated_at": "2019-01-17T08:33:08Z",
                   "merchant": {
                       "id": 131751,
-                      "name": "Leading Edge Auto Body and Mechanical Repair",
+                      "name": "Valvoline Instant Oil Change",
                       "address": "5807 Falls Road",
                       "locality": "Baltimore",
                       "region": "MD",
@@ -3927,7 +3927,7 @@ deals = {
                   "updated_at": "2019-01-12T08:55:38Z",
                   "merchant": {
                       "id": 295981,
-                      "name": "Meann Fleet",
+                      "name": "Valvoline Instant Oil Change",
                       "address": "10800 Hanna Street",
                       "locality": "Beltsville",
                       "region": "MD",
@@ -3999,7 +3999,7 @@ deals = {
                   "updated_at": "2019-02-11T08:35:21Z",
                   "merchant": {
                       "id": 330863,
-                      "name": "Meineke Car Care Center",
+                      "name": "NTB Big O Tires",
                       "address": "3425 North Chatham Road",
                       "locality": "Ellicott City",
                       "region": "MD",
@@ -4035,7 +4035,7 @@ deals = {
                   "updated_at": "2019-02-20T08:35:32Z",
                   "merchant": {
                       "id": 335321,
-                      "name": "H & H Mobile Detailing",
+                      "name": "NTB Big O Tires",
                       "address": "9220 Pulaski Highway",
                       "locality": "Middle River",
                       "region": "MD",
@@ -4178,7 +4178,7 @@ deals = {
                   "updated_at": "2019-01-12T11:41:02Z",
                   "merchant": {
                       "id": 129964,
-                      "name": "Planet Auto Wash",
+                      "name": "Buddy Bear Car Wash",
                       "address": "9101 Centreville Rd.",
                       "locality": "Manassas",
                       "region": "VA",
@@ -4215,7 +4215,7 @@ deals = {
                   "updated_at": "2019-01-12T11:41:04Z",
                   "merchant": {
                       "id": 293428,
-                      "name": "Dulles Shell Service Center",
+                      "name": "Erik's Automotive",
                       "address": "45410 Holiday Dr.",
                       "locality": "Sterling",
                       "region": "VA",
@@ -4323,7 +4323,7 @@ deals = {
                   "updated_at": "2019-02-05T10:56:38Z",
                   "merchant": {
                       "id": 129939,
-                      "name": "Precision Tune Auto Care",
+                      "name": "Erik's Automotive",
                       "address": "5831 Buckeystown Pike",
                       "locality": "Frederick",
                       "region": "MD",
@@ -4360,7 +4360,7 @@ deals = {
                   "updated_at": "2019-02-19T11:13:59Z",
                   "merchant": {
                       "id": 335239,
-                      "name": "Craftsman Auto Care",
+                      "name": "Erik's Automotive",
                       "address": "2733 Merrilee Drive",
                       "locality": "Fairfax",
                       "region": "VA",
@@ -4468,7 +4468,7 @@ deals = {
                   "updated_at": "2019-01-12T08:55:35Z",
                   "merchant": {
                       "id": 305218,
-                      "name": "EliteShine Mobile Detailing",
+                      "name": "Valvoline Instant Oil Change",
                       "address": "3243 Bethany Lane",
                       "locality": "Ellicott City",
                       "region": "MD",
@@ -4503,7 +4503,7 @@ deals = {
                   "updated_at": "2019-01-25T08:34:36Z",
                   "merchant": {
                       "id": 323300,
-                      "name": "Smooth Finishes",
+                      "name": "Platinum Auto Spa",
                       "address": "15223 Hanover Pike",
                       "locality": "Upperco",
                       "region": "MD",
@@ -4538,7 +4538,7 @@ deals = {
                   "updated_at": "2019-01-12T11:41:02Z",
                   "merchant": {
                       "id": 305941,
-                      "name": "Commonwealth Motorcars Sales And Service",
+                      "name": "Valvoline Instant Oil Change",
                       "address": "25354 Pleasant Valley Road",
                       "locality": "Chantilly",
                       "region": "VA",
@@ -4600,7 +4600,7 @@ deals = {
                   "updated_at": "2019-01-24T08:43:36Z",
                   "merchant": {
                       "id": 323027,
-                      "name": "Jr's Express Car Wash ",
+                      "name": " We Wash Express",
                       "address": "90 York Road",
                       "locality": "Warminster",
                       "region": "PA",
@@ -4636,7 +4636,7 @@ deals = {
                   "updated_at": "2019-01-12T10:48:43Z",
                   "merchant": {
                       "id": 305475,
-                      "name": "Santos - El & Sons Detailing",
+                      "name": "Buddy Bear Car Wash",
                       "address": "5623 Lancaster Avenue",
                       "locality": "Philadelphia",
                       "region": "PA",
@@ -4671,7 +4671,7 @@ deals = {
                   "updated_at": "2019-01-12T10:48:44Z",
                   "merchant": {
                       "id": 252275,
-                      "name": "R. Phillips Service",
+                      "name": "Valvoline Instant Oil Change",
                       "address": "115 Saint Joseph Lane",
                       "locality": "Downingtown",
                       "region": "PA",
@@ -4707,7 +4707,7 @@ deals = {
                   "updated_at": "2019-02-01T08:43:03Z",
                   "merchant": {
                       "id": 325213,
-                      "name": "Car Revolution",
+                      "name": "AZ Stereo",
                       "address": "538 New Jersey 38",
                       "locality": "Maple Shade Township",
                       "region": "NJ",
@@ -4742,7 +4742,7 @@ deals = {
                   "updated_at": "2018-08-11T14:38:03Z",
                   "merchant": {
                       "id": 243526,
-                      "name": "Green 'N' Clean Car Wash",
+                      "name": "Buddy Bear Car Wash",
                       "address": "196 Onix Drive",
                       "locality": "Kennett Square",
                       "region": "PA",
@@ -4778,7 +4778,7 @@ deals = {
                   "updated_at": "2019-02-08T10:22:06Z",
                   "merchant": {
                       "id": 330118,
-                      "name": "Tier One Motoring",
+                      "name": "Ultimate Protection and Sound",
                       "address": "122 Mill Road",
                       "locality": "Phoenixville",
                       "region": "PA",
@@ -4814,7 +4814,7 @@ deals = {
                   "updated_at": "2019-01-12T09:05:41Z",
                   "merchant": {
                       "id": 303561,
-                      "name": "Clean Car Auto Detailing",
+                      "name": "Discount Car Care",
                       "address": "3860 New Jersey 27",
                       "locality": "Princeton",
                       "region": "NJ",
@@ -4850,7 +4850,7 @@ deals = {
                   "updated_at": "2019-01-12T08:41:49Z",
                   "merchant": {
                       "id": 305191,
-                      "name": "Quakertown Detail",
+                      "name": "E-Klan Kar Kare",
                       "address": "250 Front Street",
                       "locality": "Quakertown",
                       "region": "PA",
@@ -4955,7 +4955,7 @@ deals = {
                   "updated_at": "2019-01-12T09:05:40Z",
                   "merchant": {
                       "id": 90,
-                      "name": "Coles Customs",
+                      "name": "AZ Stereo",
                       "address": "13440 Damar Drive",
                       "locality": "Philadelphia",
                       "region": "PA",
@@ -5136,7 +5136,7 @@ deals = {
                   "updated_at": "2019-01-12T09:05:39Z",
                   "merchant": {
                       "id": 292783,
-                      "name": "Gerald’s1stclass Autosalon",
+                      "name": "Platinum Auto Spa",
                       "address": "3950 New Falls Road",
                       "locality": "Bristol",
                       "region": "PA",
@@ -5314,29 +5314,31 @@ end
 #curl -H "Authorization: api_key WkXDXfXX" https://api.discountapi.com/v2/deals
 
 
-deals.each do |city|
+    deals.each do |city|
       City.find_or_create_by(name: city[0].to_s)
    end
 
    deals.each do |city|
-    city[1][:"deals"].each do |indiv|
-          Product.find_or_create_by(name: indiv[:"deal"][:"short_title"], description: indiv[:"deal"][:"description"], service: indiv[:"deal"][:"provider_slug"])
+        city[1][:"deals"].each do |indiv|
+            Product.find_or_create_by(name: indiv[:"deal"][:"short_title"], description: indiv[:"deal"][:"description"], service: indiv[:"deal"][:"provider_slug"])
+        end
     end
-end
 
     deals.each do |city|
        city[1][:"deals"].each do |indiv|
-                Merchant.find_or_create_by(name: indiv[:"deal"][:"merchant"][:"name"], address: "#{indiv[:"deal"][:"merchant"][:"address"]}, #{indiv[:"deal"][:"merchant"][:"locality"]}, #{indiv[:"deal"][:"merchant"][:"region"]}, #{indiv[:"deal"][:"merchant"][:"postal_code"]}")
+                Merchant.find_or_create_by(name: indiv[:"deal"][:"merchant"][:"name"])
        end
-   end
+    end
 
    deals.each do |city|
       city[1][:"deals"].each do |indiv|
-         Deal.find_or_create_by(list_price: indiv[:"deal"][:"value"], deal_price: indiv[:"deal"][:"price"], discount: indiv[:"deal"][:"discount_percentage"]*100, url: indiv[:"deal"][:"url"], city_id: City.find_by(name: city[0].to_s).id, product_id: Product.find_by(description: indiv[:"deal"][:"description"]).id, merchant_id: Merchant.find_by(name: indiv[:"deal"][:"merchant"][:"name"]).id)
+         Deal.find_or_create_by(list_price: indiv[:"deal"][:"value"], deal_price: indiv[:"deal"][:"price"], discount: indiv[:"deal"][:"discount_percentage"]*100, url: indiv[:"deal"][:"url"], address: "#{indiv[:"deal"][:"merchant"][:"address"]}, #{indiv[:"deal"][:"merchant"][:"locality"]}, #{indiv[:"deal"][:"merchant"][:"region"]}, #{indiv[:"deal"][:"merchant"][:"postal_code"]}",city_id: City.find_by(name: city[0].to_s).id, product_id: Product.find_by(description: indiv[:"deal"][:"description"]).id, merchant_id: Merchant.find_by(name: indiv[:"deal"][:"merchant"][:"name"]).id)
       end
   end
 
 
-binding.pry
+new_cli = CommandLineInterface.new
+new_cli.run
 
-puts "HELLO WORLD"
+
+

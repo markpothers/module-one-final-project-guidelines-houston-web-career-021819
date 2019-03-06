@@ -3,7 +3,6 @@ class CreateMerchant < ActiveRecord::Migration[5.0]
     create_table :merchants do | table |
       table.text :name
       table.text :address
-      table.integer :city_id
     end 
   end
 end
