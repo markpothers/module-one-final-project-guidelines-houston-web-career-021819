@@ -10,6 +10,7 @@ class CreateDeals < ActiveRecord::Migration[5.0]
       table.integer :deal_price
       table.float :discount
       table.text :url
+      table.text :address
   end
 end
 end 
