@@ -21,7 +21,10 @@ class CommandLineInterface
     gets.chomp
   end
 
-
+  # def TTY_test
+  #   prompt = TTY::Prompt.new
+  #   prompt.select("Choose your city?", %w(houston washington atlanta))
+  # end
 
 
 

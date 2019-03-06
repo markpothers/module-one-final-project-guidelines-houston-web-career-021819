@@ -15,12 +15,9 @@ require_relative '../config/environment'
 #     capital_array.join(" ")
 # end
 
-
-
-
-
 new_cli = CommandLineInterface.new
 new_cli.run
 
-
+prompt = TTY::Prompt.new
+prompt.select("Choose your city?", %w(houston washington atlanta))
 
