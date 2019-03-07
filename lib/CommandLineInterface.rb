@@ -6,7 +6,8 @@ class CommandLineInterface
   #greeting, greets the user and presents top level analytical information
   def greeting
     puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Welcome to TMK Car Maintenance Finder, the command line solution for finding good deals on car maintenance throughout the major cities of the US!\n\n"
+
+    Welcome to TMK Car Maintenance Finder, the command line solution for finding good deals on car maintenance throughout the major cities of the US!\n\n"
     puts "We have a current database of #{Deal.all.length} deals from #{Merchant.all.length} vendors, #{City.all.length} cities.\n\n"
     puts "#{Deal.best_discount}\n\n"
     puts "#{City.city_size_deals}\n\n"
@@ -32,15 +33,27 @@ Welcome to TMK Car Maintenance Finder, the command line solution for finding goo
 
   #allows the user to choose their service option
   def choose_service
+    service_options = [
+      {name: "Brake check", value: "brakes"},
+      {name: "Carwash/detailing services", value: "detail"},
+      {name: "Install a backup camera", value: "camera"},
+      {name: "Install a locking remote", value: "remote"},
+      {name: "Install heated seats", value: "heated seats"},
+      {name: "Oil change", value: "oil change"},
+      {name: "Repair hail damage", value: "hail"},
+      {name: "Wax and polish", value: "wax"},
+      {name: "Window tinting", value: "window_tinting"}
+                      ]
     prompt = TTY::Prompt.new
-    chosen_service = prompt.select("Choose your service", Service.service_types.sort)
+    chosen_service = prompt.select("Choose your service", service_options)
     chosen_service_object_id = Service.find_by(service: chosen_service).id       #converts the selected service to a relevant object id
   end
 
   #asks the user if they want to run another search or exit
   def go_again
+    choices = ["Begin a new search", {name: "No thanks, I'm done (exit)", value: "exit"}]
     prompt = TTY::Prompt.new
-    go_again_choice = prompt.select("Would you like to search again?", %w(search_again exit) )
+    go_again_choice = prompt.select("Would you like to search again?", choices)
   end
 
   #uses city and service choices to search for deals on that service-type in that city
