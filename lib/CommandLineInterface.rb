@@ -3,9 +3,15 @@ require_relative '../config/environment'
 
 class CommandLineInterface
 
-  #greeting
+  #greeting, greets the user and presents top level analytical information
   def greeting
     puts "Welcome to TMK Car Maintenance Finder, the command line solution for finding good deals on car maintenance throughout the major cities of the US!"
+    puts "We have a current database of #{Deal.all.length} deals from #{Merchant.all.length} vendors, #{City.all.length} cities."
+    Deal.best_discount
+    City.city_size_deals
+    City.highest_average_discount
+    Merchant.most_discounts
+    Merchant.highest_average_discount
   end
 
   ##converts the chosen city to a format for searching the database
@@ -35,10 +41,6 @@ class CommandLineInterface
     chosen_service_object_id = Service.find_by(service: chosen_service).id       #converts the selected service to a relevant object id
   end
 
-  def cool_info
-    puts "Some cool info"
-  end
-
   #asks the user if they want to run another search or exit
   def go_again
     prompt = TTY::Prompt.new
@@ -51,7 +53,7 @@ class CommandLineInterface
   end
 
   # takes the array of service options from "find_local_services" and formats them appropriately
-  def service_options(available_services, chosen_service, chosen_city)
+  def presented_service_options(available_services, chosen_service, chosen_city)
     if available_services == []
       puts "Unfortunately we have no offers for #{chosen_service} services in #{chosen_city} today."
     else
@@ -72,28 +74,19 @@ class CommandLineInterface
     puts "Thanks for using the TMK Car Maintenance Finder.  Goodbye!"
   end
 
- 
-
+  
   def run
     greeting
-  
     go_again_choice = "search_again"
-  binding.pry
+    service_choice = "detail"
     until go_again_choice == "exit"               # loop through the options until the user chooses to exit in the go_again method
       chosen_city_object = choose_city            #offers the user a choice of cities and returns the object for the selected city
-      service_or_deal_choice = service_or_deal     #offers a choice between specific service or general deals and returns info
-      service_choice = (
-                        if service_or_deal_choice == "service"
-                          chosen_service_object_id = choose_service
-                        else
-                          cool_info
-                        end
-                      )
-      local_services = find_local_services(chosen_city_object, service_choice)
-      service_options(local_services, Service.find(service_choice).service, chosen_city_object.name)    #calls this method which lists the deals
+      chosen_service_object_id = choose_service
+      local_services = find_local_services(chosen_city_object, chosen_service_object_id)
+      presented_service_options(local_services, Service.find(chosen_service_object_id).service, chosen_city_object.name)
+                                                                                                  #calls this method which lists the deals
       go_again_choice = go_again                                                              #offers the choice to go again or simply exit
     end
-
     goodbye
   end
 

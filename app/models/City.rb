@@ -41,7 +41,6 @@ class City < ActiveRecord::Base
       counter += 1
     end
     puts "The most competitivie city to live in #{City.all.find((city_average_discounts.each_with_index.max[1])+1).name} offering an average discount of #{city_average_discounts.max}% across #{City.all.find((city_average_discounts.each_with_index.max[1])+1).deals.length} deals from #{City.all.find((city_average_discounts.each_with_index.max[1])+1).merchants.length} merchants."
-    binding.pry
   end
 
 
@@ -81,7 +80,6 @@ class City < ActiveRecord::Base
          end
          city_with_most_available_deals << "."
          puts city_with_most_available_deals.join("")
-         binding.pry
         end 
         
         end 
