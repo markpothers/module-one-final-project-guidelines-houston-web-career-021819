@@ -28,31 +28,40 @@ class City < ActiveRecord::Base
         deal.service_id == chosen_service_object_id
       end
     end
+
+
+
         def self.city_size_deals
           city_size_deals = self.all.map do | city |
-            city.deals
+            city.deals.length
 
           end
-        end 
-
-         
-      city_size_deals.all.select do | deal |
-            deal.length
-        end 
-        end 
-
-
-        def self.most_competitive
-
-         most_competitive = City.all[0]
-          City.all.each do | city |
-          if city.size_deals > 
-            
-            very_competitive = city 
-           end 
+        
+        city_with_most_deals = self.all.select do |city|
+            city.deals.length == city_size_deals.max
           end 
-          very_competitive
+          
+         city_with_most_available_deals = [ "The largest number of deals available in any city is #{city_size_deals.max}",
+          ", and this many deals are available in"]
+          city_with_most_deals.each do |city|
+            city_with_most_available_deals << " #{city.name}"
+            city_with_most_available_deals << ","
+         end
+         city_with_most_available_deals.pop
+         
+         if city_with_most_available_deals.length > 1
+          city_with_most_available_deals.insert(-2," and") 
+         end
+         city_with_most_available_deals << "."
+         puts city_with_most_available_deals.join("")
+         binding.pry
         end 
-      end 
+        
+        end 
+
+      
+
+
+     
 
 
