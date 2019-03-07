@@ -1,3 +1,29 @@
+# Description
+Thanks for choosing the TMK Car Maintenance Finder, the command line solution for finding good deals on car maintenance throughout the major cities of the US.  This is a Command Line Interface based application that allows you to search through a series of choices of desired city and service type and will present you with a list of available deals.  The content for these deals was sourced from appropriate searches on the Discount API on Monday 4th March 2019.
+The application also offers insight on the number of deals available in the different cities as well as the average level of discounting by city and vendor allowing you to make informed decisions about the best places to go for affordable auto care.
+
+# Installation and usage instructions
+To install and run the application:
+  1. Download the application folder
+  2. In the terminal, run "bundle install"
+  2. In the terminal, run "rake db:migrate"
+  3. In the terminal, run "bundle exec ruby db/seeds.rb"
+  4. In the terminal, run "bundle exec ruby bin/run.rb"
+  5. Use the arrow keys to select appropriate options to find the most important deals for you.
+
+# Contributors
+Mark R. Pothecary
+Theodore Kimana
+
+# Licence
+Software licence in lib/LICENSE.md
+
+
+
+
+
+
+
 # Module One Final Project Guidelines
 
 Congratulations, you're at the end of module one! You've worked crazy hard to get here and have learned a ton.

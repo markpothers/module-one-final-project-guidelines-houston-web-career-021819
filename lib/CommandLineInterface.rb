@@ -67,14 +67,19 @@ class CommandLineInterface
       puts "Unfortunately we have no offers for #{chosen_service} services in #{chosen_city} today."
     else
       puts "Here are you offers for #{chosen_service} services in #{chosen_city}:\n\n"
-        counter = 1
-      available_services.each do |service|
-        puts "Offer #{counter}:"
-        puts "  #{service.name} at '#{Merchant.find(service.merchant_id).name}'"
-        puts "  Costs just $#{service.deal_price}.  Reduced from $#{service.list_price}.  A #{service.discount.to_i}% saving!"
-        puts "  Call #{service.phone} for more information or come join us over at #{service.address} for immediate service!\n\n"
-        counter += 1
-      end
+      deals = []
+      counter = 1
+        available_services.each do |service|
+          deals << {name: "Offer #{counter}:
+            #{service.name} at '#{Merchant.find(service.merchant_id).name}'
+          Costs just $#{service.deal_price}.  Reduced from $#{service.list_price}.  A #{service.discount.to_i}% saving!
+          Call #{service.phone} for more information or come join us over at #{service.address} for immediate service!
+          Visit us online at #{service.url} to learn more.", value: service.url}
+          counter += 1
+        end
+        prompt = TTY::Prompt.new
+        deal_choice = prompt.select("Select a deal to view the offer online:", deals)
+        Launchy.open(deal_choice)
     end
   end
 
