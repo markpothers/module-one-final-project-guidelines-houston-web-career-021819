@@ -78,7 +78,7 @@ class CommandLineInterface
     greeting
   
     go_again_choice = "search_again"
-  
+  binding.pry
     until go_again_choice == "exit"               # loop through the options until the user chooses to exit in the go_again method
       chosen_city_object = choose_city            #offers the user a choice of cities and returns the object for the selected city
       service_or_deal_choice = service_or_deal     #offers a choice between specific service or general deals and returns info
