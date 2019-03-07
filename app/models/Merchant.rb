@@ -22,31 +22,47 @@ class Merchant < ActiveRecord::Base
         most_discounts = deals
       end
     end
-    best_merchant
+    puts "Across the country, the merchant with the most discounts is #{Merchant.find(4).name} with #{best_merchant[:"deals"]} deals."
+    #best_merchant
   end
 
   def self.highest_average_discount
-    Deal.all.select do |deal|
-      deal.city_id = self.id
-    end
+    each_merchant_number_of_deals = (Merchant.all.map do |merchant|          #creates and array of the total number of deals offered by each merchant
+                                    merchant.deals.length
+                                    end)
 
+    merchant_discount_sums = (Merchant.all.map do |merchant|              #creates and array of the sum of all the discounts offered by each merchant
+                                discounts = merchant.deals.map do |deal| 
+                                  deal.discount
+                                end
+                                discounts.inject(:+)
+                              end)
+    
+    merchant_average_discounts = []      #divides the content of the two arrays by each other to create an array with the average for each merchant
+    counter = 0
+    until counter == each_merchant_number_of_deals.length
+      average = (merchant_discount_sums[counter]/each_merchant_number_of_deals[counter]).to_i
+      merchant_average_discounts << average
+      counter += 1
+    end
+    puts "The most generous merchant is #{Merchant.all.find((merchant_average_discounts.each_with_index.max[1])+1).name} offering an average discount of #{merchant_average_discounts.max}%."
   end
 
   def self.widest_presence
-    merchant_branches = {}
+    merchant_branches = {}        #puts all the merchants into a hash with their branch numbers and city numbers
     merchant_cities = {}
     Merchant.all.each do |merchant|
       merchant_branches[merchant.name] = merchant.cities.length
       merchant_cities[merchant.name] = merchant.cities.uniq.length
     end
-    most_branches = {"merchant": 0, "branches": 0}
+    most_branches = {"merchant": 0, "branches": 0}          #seaches for the merchant with the most branches from the merchant branches hash
     merchant_branches.each do |merchant, branches|
       if branches > most_branches[:branches]
         most_branches[:merchant] = merchant
         most_branches[:branches] = branches
       end
     end
-    most_cities = {"merchant": 0, "cities": 0}
+    most_cities = {"merchant": 0, "cities": 0}          #searches for the merchant with the most cities in the merchant cities hash
     merchant_cities.each do |merchant, cities|
       if cities > most_cities[:cities]
         most_cities[:merchant] = merchant
