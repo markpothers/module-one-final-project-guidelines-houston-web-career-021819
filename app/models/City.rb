@@ -21,8 +21,6 @@ class City < ActiveRecord::Base
     end
   end
 
-
-
   def desired_service_deals(chosen_service_object_id)
     self.deals.select do |deal|
       deal.service_id == chosen_service_object_id
