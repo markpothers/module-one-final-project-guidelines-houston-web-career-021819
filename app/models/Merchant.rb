@@ -22,8 +22,7 @@ class Merchant < ActiveRecord::Base
         most_discounts = deals
       end
     end
-    puts "Across the country, the merchant with the most discounts is #{Merchant.find(4).name} with #{best_merchant[:"deals"]} deals."
-    #best_merchant
+    puts "Across the country, the merchant with the most discounts is #{Merchant.find(4).name} with #{best_merchant[:"deals"]} deals." #best_merchant
   end
 
   def self.highest_average_discount
@@ -37,7 +36,6 @@ class Merchant < ActiveRecord::Base
                                 end
                                 discounts.inject(:+)
                               end)
-    
     merchant_average_discounts = []      #divides the content of the two arrays by each other to create an array with the average for each merchant
     counter = 0
     until counter == each_merchant_number_of_deals.length
@@ -73,6 +71,4 @@ class Merchant < ActiveRecord::Base
     puts "#{most_cities[:merchant]} has the widest reach, being present in #{most_cities[:cities]} cities, and it has #{merchant_branches[most_cities[:merchant]]} branches covering them."
   end
 
-
-
-end 
+end

@@ -8,18 +8,12 @@ class Deal < ActiveRecord::Base
   def self.best_discount
     best_deal = Deal.all[0]
     Deal.all.each do | deal|
-      if deal.discount > best_deal.discount 
-        best_deal = deal 
-      end 
-      
-    end 
+      if deal.discount > best_deal.discount
+        best_deal = deal
+      end
+    end
     best_deal
-  end 
-
- # has_many :cities
- # has_many :merchants
- # has_many :products
-
+  end
 
   def self.best_discount
     best_deal = Deal.all[0]
@@ -29,7 +23,11 @@ class Deal < ActiveRecord::Base
       end
     end
     puts "The best car maintenance deal in America right now is #{best_deal.name} at #{Merchant.find(best_deal.merchant_id).name}."
-    puts "Head to #{Merchant.find(best_deal.merchant_id).name} to take advantage now!!!!!!!!!"
+      if best_deal.phone == nil
+        puts "Head to #{Merchant.find(best_deal.merchant_id).name} at #{best_deal.address} to take advantage now!!!!!!!!!"
+      else
+        puts "Head to #{Merchant.find(best_deal.merchant_id).name} at #{best_deal.address}, or call them on #{best_deal.phone} to take advantage now!!!!!!!!!"
+      end
   end
 
 end

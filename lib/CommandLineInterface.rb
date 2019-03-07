@@ -5,13 +5,15 @@ class CommandLineInterface
 
   #greeting, greets the user and presents top level analytical information
   def greeting
-    puts "Welcome to TMK Car Maintenance Finder, the command line solution for finding good deals on car maintenance throughout the major cities of the US!"
-    puts "We have a current database of #{Deal.all.length} deals from #{Merchant.all.length} vendors, #{City.all.length} cities."
-    Deal.best_discount
-    City.city_size_deals
-    City.highest_average_discount
-    Merchant.most_discounts
-    Merchant.highest_average_discount
+    puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Welcome to TMK Car Maintenance Finder, the command line solution for finding good deals on car maintenance throughout the major cities of the US!\n\n"
+    puts "We have a current database of #{Deal.all.length} deals from #{Merchant.all.length} vendors, #{City.all.length} cities.\n\n"
+    puts "#{Deal.best_discount}\n\n"
+    puts "#{City.city_size_deals}\n\n"
+    puts "#{City.highest_average_discount}\n\n"
+    puts "#{Merchant.most_discounts}\n\n"
+    puts "#{Merchant.highest_average_discount}\n\n"
+    puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
   end
 
   ##converts the chosen city to a format for searching the database
@@ -26,12 +28,6 @@ class CommandLineInterface
     chosen_city = prompt.select("Please choose your city", City.capital_cities.sort)
     converted_city = convert_city(chosen_city)                        #converts well formatted city name to searchable in the database
     chosen_city_object = City.find_by(name: converted_city)           #finds the city object
-  end
-
-  #allows the user to choose between a specific service or just seeing some great info about deals
-  def service_or_deal
-    prompt = TTY::Prompt.new
-    prompt.select("Are you looking for a particular service, or just a GREAT DEAL?", %w(service deal) )
   end
 
   #allows the user to choose their service option
@@ -61,8 +57,8 @@ class CommandLineInterface
         counter = 1
       available_services.each do |service|
         puts "Offer #{counter}:"
-        puts "  #{service.name} at '#{Merchant.find(service.merchant_id).name}''"
-        puts "  Costs just $#{service.deal_price}.  Reduced from $#{service.list_price}.  A #{service.discount}% saving!"
+        puts "  #{service.name} at '#{Merchant.find(service.merchant_id).name}'"
+        puts "  Costs just $#{service.deal_price}.  Reduced from $#{service.list_price}.  A #{service.discount.to_i}% saving!"
         puts "  Call #{service.phone} for more information or come join us over at #{service.address} for immediate service!\n\n"
         counter += 1
       end
@@ -74,7 +70,7 @@ class CommandLineInterface
     puts "Thanks for using the TMK Car Maintenance Finder.  Goodbye!"
   end
 
-  
+
   def run
     greeting
     go_again_choice = "search_again"
