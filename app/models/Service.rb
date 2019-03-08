@@ -10,8 +10,4 @@ class Service < ActiveRecord::Base
     end
   end
 
-  def capital_services
-
-  end
-
 end

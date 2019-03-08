@@ -37,19 +37,8 @@ Welcome to TMK Car Maintenance Finder, the command line solution for finding goo
     end
 
   #allows the user to choose their service option
-  def choose_service
-    service_options = [
-      {name: "Brake check", value: "brakes"},
-      {name: "Carwash/detailing services", value: "detail"},
-      {name: "Install a backup camera", value: "camera"},
-      {name: "Install a locking remote", value: "remote"},
-      {name: "Install heated seats", value: "heated seats"},
-      {name: "Oil change", value: "oil change"},
-      {name: "Repair hail damage", value: "hail"},
-      {name: "Wax and polish", value: "wax"},
-      {name: "Window tinting", value: "window_tinting"},
-      {name: "Exit", value: "exit"}
-                      ]
+  def choose_service (chosen_city_object)
+    service_options = chosen_city_object.local_services
     prompt = TTY::Prompt.new
     chosen_service = prompt.select("Choose your service", service_options)
       if chosen_service != "exit"
@@ -115,7 +104,7 @@ Welcome to TMK Car Maintenance Finder, the command line solution for finding goo
     until go_again_choice == "exit" || chosen_service_object_id == "exit" || chosen_city_object == "exit" || deal_choice == "exit" # loop through the options until the user chooses to exit somewhere
       chosen_city_object = choose_city   #offers the user a choice of city; returns the object
         if chosen_city_object != "exit"
-          chosen_service_object_id = choose_service  #offers choice of service and returns id
+          chosen_service_object_id = choose_service(chosen_city_object)  #offers choice of service and returns id
         end
         if chosen_city_object != "exit" && chosen_service_object_id != "exit"
           local_services = find_local_services(chosen_city_object, chosen_service_object_id)

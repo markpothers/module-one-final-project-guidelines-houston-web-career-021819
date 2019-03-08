@@ -28,6 +28,55 @@ class City < ActiveRecord::Base
     capital_array.join(" ")
   end
 
+  def local_services
+    local_services = []
+      self.services.uniq.sort.each do |service|
+        if service.service == "brakes"
+          local_services << {name: "Brake check", value: "brakes"}
+        end
+        if service.service == "detail"
+          local_services << {name: "Carwash/detailing services", value: "detail"}
+        end
+        if service.service == "camera"
+          local_services << {name: "Install a backup camera", value: "camera"}
+        end
+        if service.service == "remote"
+          local_services << {name: "Install a locking remote", value: "remote"}
+        end
+        if service.service == "heated seats"
+          local_services << {name: "Install heated seats", value: "heated seats"}
+        end
+        if service.service == "oil change"
+          local_services << {name: "Oil change", value: "oil change"}
+        end
+        if service.service == "hail"
+          local_services << {name: "Repair hail damage", value: "hail"}
+        end
+        if service.service == "wax"
+          local_services << {name: "Wax and polish", value: "wax"}
+        end
+        if service.service == "window_tinting"
+          local_services << {name: "Window tinting", value: "window_tinting"}
+        end
+      end
+      sorted_services = local_services.sort_by {|k| k[:"name"]}
+      sorted_services << {name: "Exit", value: "exit"}
+      sorted_services
+    end
+
+    # [
+    #   {name: "Brake check", value: "brakes"},
+    #   {name: "Carwash/detailing services", value: "detail"},
+    #   {name: "Install a backup camera", value: "camera"},
+    #   {name: "Install a locking remote", value: "remote"},
+    #   {name: "Install heated seats", value: "heated seats"},
+    #   {name: "Oil change", value: "oil change"},
+    #   {name: "Repair hail damage", value: "hail"},
+    #   {name: "Wax and polish", value: "wax"},
+    #   {name: "Window tinting", value: "window_tinting"},
+    #   {name: "Exit", value: "exit"}
+    #                   ]
+
   def self.highest_average_discount
     each_city_number_of_deals = City.all.map do |city|          #creates and array of the total number of deals offered in each city
                                   city.deals.length
