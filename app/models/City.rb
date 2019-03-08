@@ -45,7 +45,7 @@ class City < ActiveRecord::Base
       city_average_discounts << average
       counter += 1
     end
-    puts "The most competitivie city to live in #{City.all.find((city_average_discounts.each_with_index.max[1])+1).capital_name} offering an average discount of #{city_average_discounts.max}% across #{City.all.find((city_average_discounts.each_with_index.max[1])+1).deals.length} deals from #{City.all.find((city_average_discounts.each_with_index.max[1])+1).merchants.length} merchants."
+    puts "The most competitive city to live in #{City.all.find((city_average_discounts.each_with_index.max[1])+1).capital_name} offering an average discount of #{city_average_discounts.max}% across #{City.all.find((city_average_discounts.each_with_index.max[1])+1).deals.length} deals from #{City.all.find((city_average_discounts.each_with_index.max[1])+1).merchants.length} merchants."
   end
 
   def desired_service_deals(chosen_service_object_id)

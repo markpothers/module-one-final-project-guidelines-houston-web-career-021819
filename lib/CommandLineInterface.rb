@@ -7,13 +7,13 @@ class CommandLineInterface
   def greeting
     puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-    Welcome to TMK Car Maintenance Finder, the command line solution for finding good deals on car maintenance throughout the major cities of the US!\n\n"
+Welcome to TMK Car Maintenance Finder, the command line solution for finding good deals on car maintenance throughout the major cities of the US!\n\n"
     puts "We have a current database of #{Deal.all.length} deals from #{Merchant.all.length} vendors, #{City.all.length} cities.\n\n"
-    puts "#{Deal.best_discount}\n\n"
-    puts "#{City.city_size_deals}\n\n"
-    puts "#{City.highest_average_discount}\n\n"
-    puts "#{Merchant.most_discounts}\n\n"
-    puts "#{Merchant.highest_average_discount}\n\n"
+    puts "#{Deal.best_discount}\n"
+    puts "#{City.city_size_deals}\n"
+    puts "#{City.highest_average_discount}\n"
+    puts "#{Merchant.most_discounts}\n"
+    puts "#{Merchant.highest_average_discount}\n"
     puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
   end
 
@@ -25,11 +25,16 @@ class CommandLineInterface
 
   #allows the user to choose their city
   def choose_city
+    city_choices = [City.capital_cities.sort, {name: "Exit", value: "exit"}].flatten
     prompt = TTY::Prompt.new
-    chosen_city = prompt.select("Please choose your city", City.capital_cities.sort)
+    chosen_city = prompt.select("Please choose your city", city_choices)
     converted_city = convert_city(chosen_city)                        #converts well formatted city name to searchable in the database
+      if chosen_city != "exit"
     chosen_city_object = City.find_by(name: converted_city)           #finds the city object
-  end
+      else
+        chosen_city_object = "exit"
+      end
+    end
 
   #allows the user to choose their service option
   def choose_service
@@ -42,11 +47,16 @@ class CommandLineInterface
       {name: "Oil change", value: "oil change"},
       {name: "Repair hail damage", value: "hail"},
       {name: "Wax and polish", value: "wax"},
-      {name: "Window tinting", value: "window_tinting"}
+      {name: "Window tinting", value: "window_tinting"},
+      {name: "Exit", value: "exit"}
                       ]
     prompt = TTY::Prompt.new
     chosen_service = prompt.select("Choose your service", service_options)
-    chosen_service_object_id = Service.find_by(service: chosen_service).id       #converts the selected service to a relevant object id
+      if chosen_service != "exit"
+        chosen_service_object_id = Service.find_by(service: chosen_service).id       #converts the selected service to a relevant object id
+      else
+        chosen_service_object_id = "exit"
+      end
   end
 
   #asks the user if they want to run another search or exit
@@ -63,6 +73,7 @@ class CommandLineInterface
 
   # takes the array of service options from "find_local_services" and formats them appropriately
   def presented_service_options(available_services, chosen_service, chosen_city)
+    deal_choice = "choice"
     if available_services == []
       puts "Unfortunately we have no offers for #{chosen_service} services in #{chosen_city} today."
     else
@@ -77,10 +88,14 @@ class CommandLineInterface
           Visit us online at #{service.url} to learn more.", value: service.url}
           counter += 1
         end
+        deals << {name: "Exit", value: "exit"}
         prompt = TTY::Prompt.new
         deal_choice = prompt.select("Select a deal to view the offer online:", deals)
-        Launchy.open(deal_choice)
+          if deal_choice != "exit"
+            Launchy.open(deal_choice)
+          end
     end
+    deal_choice
   end
 
   #goodbye
@@ -91,16 +106,26 @@ class CommandLineInterface
 
   def run
     greeting
-    go_again_choice = "search_again"
-    service_choice = "detail"
-    until go_again_choice == "exit"               # loop through the options until the user chooses to exit in the go_again method
-      chosen_city_object = choose_city            #offers the user a choice of cities and returns the object for the selected city
-      chosen_service_object_id = choose_service
-      local_services = find_local_services(chosen_city_object, chosen_service_object_id)
-      presented_service_options(local_services, Service.find(chosen_service_object_id).service, chosen_city_object.name)
-                                                                                                  #calls this method which lists the deals
-      go_again_choice = go_again                                                              #offers the choice to go again or simply exit
+ 
+    go_again_choice = "search_again" # preset some variable for the loop
+    chosen_service_object_id = 1
+    chosen_city_object = City.all[0]
+    deal_choice = "choice"
+
+    until go_again_choice == "exit" || chosen_service_object_id == "exit" || chosen_city_object == "exit" || deal_choice == "exit" # loop through the options until the user chooses to exit somewhere
+      chosen_city_object = choose_city   #offers the user a choice of city; returns the object
+        if chosen_city_object != "exit"
+          chosen_service_object_id = choose_service  #offers choice of service and returns id
+        end
+        if chosen_city_object != "exit" && chosen_service_object_id != "exit"
+          local_services = find_local_services(chosen_city_object, chosen_service_object_id)
+          deal_choice = presented_service_options(local_services, Service.find(chosen_service_object_id).service, chosen_city_object.capital_name)  #calls this method which lists the deals
+        end
+            if deal_choice != "exit" && chosen_service_object_id != "exit" && chosen_city_object != "exit"
+              go_again_choice = go_again
+            end              #offers the choice to go again or simply exit
     end
+
     goodbye
   end
 
