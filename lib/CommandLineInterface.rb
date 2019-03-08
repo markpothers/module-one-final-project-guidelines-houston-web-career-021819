@@ -92,9 +92,75 @@ Welcome to TMK Car Maintenance Finder, the command line solution for finding goo
     puts "Thanks for using the TMK Car Maintenance Finder.  Goodbye!"
   end
 
+  def database_update
+    houston = RestClient.get "https://api.discountapi.com/v2/deals?api_key=WkXDXfXX&location=29.7604, -95.3698&radius=50&provider_slugs=groupon&category_slugs=automotive-services"
+    parsed_houston = JSON.parse(houston.body)
+
+    san_antonio = RestClient.get "https://api.discountapi.com/v2/deals?api_key=WkXDXfXX&location=29.4241, -98.4936&radius=50&provider_slugs=groupon&category_slugs=automotive-services"
+    parsed_san_antonio = JSON.parse(san_antonio.body)
+
+    chicago = RestClient.get "https://api.discountapi.com/v2/deals?api_key=WkXDXfXX&location=41.8781, -87.6298&radius=50&provider_slugs=groupon&category_slugs=automotive-services"
+    parsed_chicago = JSON.parse(chicago.body)
+
+    atlanta = RestClient.get "https://api.discountapi.com/v2/deals?api_key=WkXDXfXX&location=33.7490, -84.3880&radius=50&provider_slugs=groupon&category_slugs=automotive-services"
+    parsed_atlanta = JSON.parse(atlanta.body)
+
+    los_angeles = RestClient.get "https://api.discountapi.com/v2/deals?api_key=WkXDXfXX&location=34.0522, -118.2437&radius=50&provider_slugs=groupon&category_slugs=automotive-services"
+    parsed_los_angeles = JSON.parse(los_angeles.body)
+
+    new_york = RestClient.get "https://api.discountapi.com/v2/deals?api_key=WkXDXfXX&location=40.7128, -74.0060&radius=50&provider_slugs=groupon&category_slugs=automotive-services"
+    parsed_new_york = JSON.parse(new_york.body)
+
+    washington = RestClient.get "https://api.discountapi.com/v2/deals?api_key=WkXDXfXX&location=38.9072, -77.0369&radius=50&provider_slugs=groupon&category_slugs=automotive-services"
+    parsed_washington = JSON.parse(washington.body)
+
+    philadelphia = RestClient.get "https://api.discountapi.com/v2/deals?api_key=WkXDXfXX&location=39.9526, -75.1652&radius=50&provider_slugs=groupon&category_slugs=automotive-services"
+    parsed_philadelphia = JSON.parse(philadelphia.body)
+
+    deals = {}
+    deals[:"houston"] = parsed_houston
+    deals[:"san_antonio"] = parsed_san_antonio
+    deals[:"chicago"] = parsed_chicago
+    deals[:"atlanta"] = atlanta
+    deals[:"los_angeles"] = los_angeles
+    deals[:"new_york"] = new_york
+    deals[:"washington"] = washington
+    deals[:"philadelphia"] = philadelphia
+
+#    deals[:"houston"]["deals"][0]["deal"]["provider_slug"]
+
+    deals.each do |city|
+      city[1]["deals"].each do |indiv|
+        binding.pry
+        if indiv["deal"]["short_title"].include("Oil Change") ||indiv["deal"]["short_title"].include("oil change") 
+         indiv["deal"]["provider_slug"] = "oil change"
+        end
+
+
+        
+  end
+
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   def run
     greeting
+    binding.pry
  
     go_again_choice = "search_again" # preset some variable for the loop
     chosen_service_object_id = 1

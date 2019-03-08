@@ -64,19 +64,6 @@ class City < ActiveRecord::Base
       sorted_services
     end
 
-    # [
-    #   {name: "Brake check", value: "brakes"},
-    #   {name: "Carwash/detailing services", value: "detail"},
-    #   {name: "Install a backup camera", value: "camera"},
-    #   {name: "Install a locking remote", value: "remote"},
-    #   {name: "Install heated seats", value: "heated seats"},
-    #   {name: "Oil change", value: "oil change"},
-    #   {name: "Repair hail damage", value: "hail"},
-    #   {name: "Wax and polish", value: "wax"},
-    #   {name: "Window tinting", value: "window_tinting"},
-    #   {name: "Exit", value: "exit"}
-    #                   ]
-
   def self.highest_average_discount
     each_city_number_of_deals = City.all.map do |city|          #creates and array of the total number of deals offered in each city
                                   city.deals.length
